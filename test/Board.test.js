@@ -22,7 +22,16 @@ describe('Board', () => {
         });
 
         it('should ignore off-the-board neighbors', () => {
-            let neighbors = board.findNeighbors(1,1);
+            let neighbors = board.findNeighbors(0,0);
+            neighbors.length.should.equal(3);
+
+            neighbors = board.findNeighbors(0,9);
+            neighbors.length.should.equal(3);
+
+            neighbors = board.findNeighbors(9,0);
+            neighbors.length.should.equal(3);
+
+            neighbors = board.findNeighbors(9,9);
             neighbors.length.should.equal(3);
         });
     });

@@ -27,8 +27,8 @@ class Board {
     }
 
     isOnBoard = (row, col) => {
-        return row > 0 && 
-        col > 0 && 
+        return row >= 0 && 
+        col >= 0 && 
         row < this.tiles.length &&
         col < this.tiles[0].length;
     }
