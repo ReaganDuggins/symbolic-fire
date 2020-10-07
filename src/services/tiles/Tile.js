@@ -1,7 +1,8 @@
 class Tile {
-    constructor() {
-        this.distanceFromStart = 9007199254740991;
-        this.symbol = "_";
+    constructor(row, col) {
+        this.travelCost = 0;
+        this.row = row;
+        this.col = col;
     }
 }
 

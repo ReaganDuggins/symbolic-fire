@@ -14,18 +14,6 @@ class Board {
         this.tiles = rows;
     }
 
-    findNeighbors = (row, column) => {
-        let neighbors = [];
-        for(let i = row - 1; i <= row + 1; i++) {
-            for(let j = column - 1; j <= column + 1; j++) {
-                if(!(i === row && j === column) && this.isOnBoard(i, j)) {
-                    neighbors.push({row: i, col: j});
-                }
-            }
-        }
-        return neighbors;
-    }
-
     isOnBoard = (row, col) => {
         return row >= 0 && 
         col >= 0 && 
